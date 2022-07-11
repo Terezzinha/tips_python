@@ -16,3 +16,14 @@ with open("criar_arquivo.txt", mode="w") as file:
 with open("../../arquivos_auxiliares/estudo_path_py.txt") as file:
     contents = file.read()
     print(contents)
+
+#CSV
+import csv
+
+with open("weather_data.csv") as data_file:
+    data = csv.reader(data_file)
+    temperature = []
+    for row in data:
+        if row[1] != 'temp':
+            temperature.append(int(row[1]))
+    print(temperature)
