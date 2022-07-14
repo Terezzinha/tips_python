@@ -33,3 +33,8 @@ data_dict = {
 data = pd.DataFrame(data_dict)
 print(data)
 data.to_csv("new_data.csv")
+
+
+#quantos de cada valor ---
+print(data['Primary Fur Color'].value_counts())
+
