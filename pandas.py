@@ -1,3 +1,4 @@
+from turtle import color
 import pandas as pd 
 
 data = pd.read_csv("weather_data.csv")
@@ -35,6 +36,13 @@ print(data)
 data.to_csv("new_data.csv")
 
 
-#quantos de cada valor ---
+#Contar #day25
 print(data['Primary Fur Color'].value_counts())
+#
+fur_gray = len(data[data['Primary Fur Color'] == 'Gray'])
 
+#filtro #day25
+fur_gray = data[data['Primary Fur Color'] == 'Gray']
+print(fur_gray)
+
+    
